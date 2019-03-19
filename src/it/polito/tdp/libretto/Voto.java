@@ -34,7 +34,7 @@ public class Voto {
 	}
 	@Override
 	public String toString() {
-		return "Voto [voto=" + punti + ", coso=" + corso + ", data=" + data + "]";
+		return "Voto [voto=" + punti + ", corso=" + corso + ", data=" + data + "]";
 	}
 	@Override
 	public int hashCode() {
@@ -59,6 +59,12 @@ public class Voto {
 			return false;
 		return true;
 	}
+	
+	public Voto clone() {
+		return new Voto(this.punti, this.corso, this.data);
+	}
+	
+	
 	
 	
 	
